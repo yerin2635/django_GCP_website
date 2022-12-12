@@ -52,3 +52,5 @@ $ python manage.py migrate
 ```shell
 $ python manage.py runserver
 ```
+
+8. 測試
