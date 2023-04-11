@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.urls import path, include
 from home.views import UserHome, GetAllData, get_posts_choose, create_posts, update_posts, delete_posts, \
-    RegisterView, UserAddArticle, UserLogin, UserLogout
+    RegisterView, UserAddArticle, UserLogin, UserLogout, edit_test,save_data,search
 from home import views
 from rest_framework.routers import DefaultRouter
 
@@ -44,6 +44,10 @@ urlpatterns = [
     path('user-posts', create_posts),
     path('update-posts/<mode_id>', update_posts, name='edit'),
     path('delete-posts/<data_id>', delete_posts, name='delete'),
+    path('edit_test/<get_id>', edit_test, name="edit"),
+    path('save_data/<mode_id>',save_data, name='edit'),
+    path('search/', search, name='search'),
+
 
     # path(r'api/', include(router.urls)),
     # path(r'get/', include(router1.urls)),

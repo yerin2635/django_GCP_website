@@ -55,7 +55,7 @@ class Post(models.Model):
     author = models.CharField(max_length=100)
     content = models.TextField(blank=True)
     photo = models.URLField(blank=True)
-    location = models.CharField(max_length=100)
+    location = models.CharField(max_length=100,blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     user_name = models.ForeignKey(Account, on_delete=models.CASCADE)
 
